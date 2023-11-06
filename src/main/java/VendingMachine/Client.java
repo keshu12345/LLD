@@ -34,19 +34,12 @@ public class Client {
     }
 
     private static void displayInventory(VendingMachine vendingMachine) {
-        ItemShelf []slots=vendingMachine.getInventory().getItemShelves();
-//        for (ItemShelf itemShelf : itemShelves) {
-//            System.out.println("CodeNumber: " + itemShelf.getCode() +
-//                    "Item: " + itemShelf.getItem().getType().name() +
-//                    "Price: " + itemShelf.getItem().getPrice() +
-//                    "isAvailable: " + !itemShelf.getSoldOut());
-//        }
-        for (int i = 0; i < slots.length; i++) {
-
-            System.out.println("CodeNumber: " + slots[i].getCode() +
-                    " Item: " + slots[i].getItem().getType().name() +
-                    " Price: " + slots[i].getItem().getPrice() +
-                    " isAvailable: " + !slots[i].getSoldOut());
+        ItemShelf []itemShelfs=vendingMachine.getInventory().getItemShelves();
+        for (ItemShelf itemShelf : itemShelfs) {
+            System.out.println("CodeNumber: " + itemShelf.getCode() +
+                    " Item: " + itemShelf.getItem().getType().name() +
+                    " Price: " + itemShelf.getItem().getPrice() +
+                    " isAvailable: " + !itemShelf.getSoldOut());
         }
 
     }
